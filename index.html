@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f840a980ae.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="new-note">
+      <button class="add-note"><i class="fas fa-plus"></i>Add note</button>
+    </div>
+    <div class="note-modal hide">
+      <div class="note-up">
+        <p class="title">Title</p>
+        <input class="note-up-input" type="text" required />
+      </div>
+      <div class="note-down">
+        <p class="description">Description</p>
+        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+      </div>
+      <button class="add">Create</button>
+    </div>
+    <div class="overlay hide"></div>
     <script src="script.js"></script>
   </body>
 </html>
