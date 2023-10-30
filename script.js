@@ -50,8 +50,8 @@ const createNote = function () {
     inputDescription.value = "";
   }
 
-  const deleteNoteBtn = document.querySelector(".fa-times");
-  deleteNoteBtn.addEventListener("click", deleteNote);
+  const deleteNoteBtn = document.querySelectorAll(".fa-times");
+  deleteNoteBtn.forEach((el) => el.addEventListener("click", deleteNote));
 };
 
 const deleteNote = function (e) {
