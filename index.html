@@ -21,6 +21,7 @@
     <div class="new-note">
       <button class="add-note"><i class="fas fa-plus"></i>Add note</button>
     </div>
+    <div class="create-note"></div>
     <div class="note-modal hide">
       <div class="note-up">
         <p class="title">Title</p>
@@ -28,9 +29,18 @@
       </div>
       <div class="note-down">
         <p class="description">Description</p>
-        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        <textarea
+          name="note"
+          id="note"
+          class="note-down-desc"
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
-      <button class="add">Create</button>
+      <div class="modal-btns">
+        <button class="add">Create</button>
+        <button class="close">Close</button>
+      </div>
     </div>
     <div class="overlay hide"></div>
     <script src="script.js"></script>

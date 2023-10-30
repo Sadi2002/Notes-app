@@ -20,6 +20,7 @@ h1 {
 .new-note {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 50px;
 }
 
 .add-note {
@@ -48,6 +49,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s;
 }
 
 .hide {
@@ -70,6 +72,8 @@ h1 {
   gap: 50px;
   align-items: center;
   z-index: 100;
+  max-width: 500px;
+  transition: all 0.5s;
 }
 
 .note-up,
@@ -86,8 +90,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.add {
-  width: 50%;
+.add,
+.close {
+  width: 100px;
   height: 40px;
   background-color: rgb(115, 157, 119);
   transition: all 0.5s;
@@ -95,8 +100,13 @@ h1 {
   border-radius: 10px;
   color: #fff;
   font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
+.close {
+  background-color: rgb(228, 147, 34);
+}
 input,
 textarea {
   background-color: transparent;
@@ -109,4 +119,53 @@ textarea {
 
 textarea {
   height: auto;
+}
+
+.modal-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.create-note {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.fa-times {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.note {
+  width: 300px;
+  max-width: 300px;
+  min-height: 300px;
+  background-color: rgb(104, 154, 97);
+  padding: 30px;
+  position: relative;
+}
+
+.note-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: rgb(221, 220, 220);
+  letter-spacing: 2px;
+}
+
+.note-description {
+  color: rgb(221, 221, 221);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (768px <= width) {
+  .add,
+  .close {
+    width: 150px;
+  }
 }
